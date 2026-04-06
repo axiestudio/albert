@@ -6,6 +6,8 @@
 
 Built with [Vertex AI](https://cloud.google.com/vertex-ai) · [Cloudflare Workers](https://workers.cloudflare.com) · [Astro](https://astro.build) · [Hono](https://hono.dev) · [Vercel AI SDK](https://sdk.vercel.ai)
 
+[Live Demo →](https://law.axiestudio.se)
+
 </div>
 
 ---
@@ -19,7 +21,31 @@ Albert is an agentic AI research assistant that helps you explore Swedish law. A
 3. **Analyze** legal text with reasoning-capable LLMs (Gemini, Claude, GPT-4o, etc.)
 4. **Cite** sources with direct links to official publications
 
-It runs as two Cloudflare Workers — a **Hono API backend** (port 3001) and an **Astro + React frontend** (port 3000).
+It runs as two Cloudflare Workers — a **Hono API backend** (port 3001) and an **Astro + React frontend** (port 3000). No API keys are required to run the frontend — Albert is **BYOK-first** (Bring Your Own Key), so users enter their own provider keys in the browser settings.
+
+> **Try it live:** [law.axiestudio.se](https://law.axiestudio.se) — no account required, runs in guest mode.
+
+---
+
+## Screenshots
+
+Albert researching the legislative chain behind Sweden's Work Environment Act (*Arbetsmiljölagen*):
+
+### Final answer with structured citations and direct source links
+
+![Albert final answer — legislative chain, key sources, interpretation risks, and footnoted citations](docs/screenshots/albert-answer-citations.png)
+
+### Agent tracing — fetching propositions and supplementary sources
+
+![Albert agent tracing — fetching proposition 1976/77:149 and reading lagen.nu commentary](docs/screenshots/albert-agent-tracing.png)
+
+### Multi-step deep research — reading full statute text across multiple sources
+
+![Albert multi-step research — reading Riksdagen documents, lagen.nu commentary, and searching for propositions](docs/screenshots/albert-multi-step-research.png)
+
+### User query → Agent starts researching with tool calls
+
+![Albert tool calls — searching laws, fetching statutes, reading lagen.nu, tracing legislative chains](docs/screenshots/albert-tool-calls.png)
 
 ---
 
