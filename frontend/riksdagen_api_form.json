@@ -1,0 +1,284 @@
+{
+  "content": {
+    "page_title": "Skapa sökfråga för API - Riksdagen (Swedish Parliament API Query Builder)",
+    "description": "Create URL addresses for XML with different filtering. Fill in one or more fields in the form.",
+    "base_url": "https://data.riksdagen.se/dokumentlista/",
+    "parameters": {
+      "sok": {
+        "label": "Sökord (Search term)",
+        "type": "text",
+        "param": "sok"
+      },
+      "doktyp": {
+        "label": "Dokumenttyp (Document type)",
+        "type": "select",
+        "param": "doktyp",
+        "option_count": 85,
+        "options_sample": [
+          {
+            "value": "kam-ad",
+            "text": "Aktuell debatt"
+          },
+          {
+            "value": "kam-al",
+            "text": "Allmänpolitisk debatt"
+          },
+          {
+            "value": "kam-av",
+            "text": "Avslutning"
+          },
+          {
+            "value": "kam-at",
+            "text": "Avtackning"
+          },
+          {
+            "value": "kam-vo",
+            "text": "Beslut"
+          },
+          {
+            "value": "kal-be",
+            "text": "Besök"
+          },
+          {
+            "value": "bet",
+            "text": "Betänkande"
+          },
+          {
+            "value": "kam-bd",
+            "text": "Bordläggningsdebatt"
+          },
+          {
+            "value": "kam-bp",
+            "text": "Bordläggningsplenum"
+          },
+          {
+            "value": "kam-bu",
+            "text": "Budgetdebatt"
+          },
+          {
+            "value": "kam-dv",
+            "text": "Debatt om vårpropositionen"
+          },
+          {
+            "value": "ds",
+            "text": "Departementsserien"
+          },
+          {
+            "value": "kam-eu",
+            "text": "EU-debatt"
+          },
+          {
+            "value": "kom",
+            "text": "EU-förslag"
+          },
+          {
+            "value": "eundok",
+            "text": "EU-nämndens dokument"
+          },
+          {
+            "value": "eprotokoll",
+            "text": "EU-nämndens protokoll"
+          }
+        ],
+        "note": "85 total document types available including motions, propositions, protocols, debates, EU documents, etc."
+      },
+      "rm": {
+        "label": "Riksmöte (Parliamentary session)",
+        "type": "text",
+        "param": "rm"
+      },
+      "from": {
+        "label": "Datum (Date from)",
+        "type": "text",
+        "param": "from",
+        "format": "YYYY-MM-DD"
+      },
+      "tom": {
+        "label": "T.o.m. (Date to)",
+        "type": "text",
+        "param": "tom",
+        "format": "YYYY-MM-DD",
+        "example": "2005-11-11"
+      },
+      "ts": {
+        "label": "Systemdatum (System date)",
+        "type": "text",
+        "param": "ts"
+      },
+      "bet": {
+        "label": "Beteckning (Designation)",
+        "type": "text",
+        "param": "bet"
+      },
+      "tempbet": {
+        "label": "Tempbet (Temp designation)",
+        "type": "text",
+        "param": "tempbet"
+      },
+      "nr": {
+        "label": "Nummer (Number)",
+        "type": "text",
+        "param": "nr"
+      },
+      "org": {
+        "label": "Utskott/organ (Committee/body)",
+        "type": "select",
+        "param": "org",
+        "option_count": 63,
+        "options_sample": [
+          "Arbetsmarknadsutskottet (AU)",
+          "Bostadsutskottet (BoU)",
+          "Civilutskottet (CU)"
+        ],
+        "note": "63 committees/bodies available"
+      },
+      "iid": {
+        "label": "Ledamot/person (Member/person)",
+        "type": "select",
+        "param": "iid",
+        "option_count": 2708,
+        "note": "2708 parliament members available"
+      },
+      "parti": {
+        "label": "Parti (Party)",
+        "type": "checkbox",
+        "param": "parti",
+        "options": [
+          {
+            "value": "S",
+            "text": "Socialdemokraterna"
+          },
+          {
+            "value": "M",
+            "text": "Moderata samlingspartiet"
+          },
+          {
+            "value": "L",
+            "text": "Liberalerna"
+          },
+          {
+            "value": "KD",
+            "text": "Kristdemokraterna"
+          },
+          {
+            "value": "V",
+            "text": "Vänsterpartiet"
+          },
+          {
+            "value": "SD",
+            "text": "Sverigedemokraterna"
+          },
+          {
+            "value": "C",
+            "text": "Centerpartiet"
+          },
+          {
+            "value": "MP",
+            "text": "Miljöpartiet de gröna"
+          },
+          {
+            "value": "NYD",
+            "text": "Ny demokrati"
+          },
+          {
+            "value": "-",
+            "text": "partilösa/m.m."
+          }
+        ]
+      },
+      "avd": {
+        "label": "Avdelning (Section)",
+        "type": "select",
+        "param": "avd",
+        "option_count": 7,
+        "options_sample": [
+          "alla",
+          "Dokument",
+          "Webb-tv",
+          "Kalender"
+        ]
+      },
+      "webbtv": {
+        "label": "Webb-tv",
+        "type": "text",
+        "param": "webbtv",
+        "note": "Value 1 to filter"
+      },
+      "talare": {
+        "label": "Talare (Speaker)",
+        "type": "text",
+        "param": "talare"
+      },
+      "exakt": {
+        "label": "Exakt matchning (Exact match)",
+        "type": "text",
+        "param": "exakt",
+        "note": "Value 1 for exact"
+      },
+      "planering": {
+        "label": "Planering (Planning)",
+        "type": "text",
+        "param": "planering"
+      },
+      "facetter": {
+        "label": "Facetter (Facets)",
+        "type": "text",
+        "param": "facets",
+        "note": "Values 0-4"
+      },
+      "sort": {
+        "label": "Sortering (Sorting)",
+        "type": "select",
+        "param": "sort",
+        "option_count": 10,
+        "options_sample": [
+          "Relevans",
+          "Datum",
+          "systemdatum",
+          "Beteckning"
+        ]
+      },
+      "sortorder": {
+        "label": "Ordning (Order)",
+        "type": "select",
+        "param": "sortorder",
+        "options": [
+          {
+            "value": "desc",
+            "text": "Fallande (desc)"
+          },
+          {
+            "value": "asc",
+            "text": "Stigande (asc)"
+          }
+        ]
+      },
+      "rapport": {
+        "label": "Rapporter (Reports)",
+        "type": "select",
+        "param": "rapport",
+        "options_sample": [
+          "motionstid",
+          "Inkomna förslag"
+        ]
+      },
+      "utformat": {
+        "label": "Utformat (Output format)",
+        "type": "select",
+        "param": "utformat",
+        "option_count": 9,
+        "options_sample": [
+          "RSS",
+          "HTML - webbsida",
+          "XML"
+        ]
+      }
+    },
+    "contact": {
+      "address": "Sveriges riksdag, 100 12 Stockholm",
+      "phone": "08-786 40 00",
+      "questions_phone": "020-349 000",
+      "email": "riksdagsinformation@riksdagen.se"
+    }
+  }
+}

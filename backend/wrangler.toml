@@ -1,0 +1,32 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "albert-law-agent"
+main = "src/index.ts"
+compatibility_date = "2026-02-26"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+
+# ─── Observability ────────────────────────────────────────────────────────────
+[observability]
+enabled = true
+
+  [observability.logs]
+  head_sampling_rate = 1
+
+[vars]
+ENVIRONMENT = "development"
+
+# ─── Vectorize Binding (optional — use REST API fallback if not bound) ────────
+# Uncomment if you have a Vectorize index bound to this worker:
+# [[vectorize]]
+# binding = "SFS_VECTORIZE"
+# index_name = "sfs-law-index"
+
+# ─── Workers AI Binding (optional) ───────────────────────────────────────────
+# [ai]
+# binding = "AI"
+
+# =============================================================================
+# Production environment
+# =============================================================================
+[env.production]
+vars = { ENVIRONMENT = "production" }

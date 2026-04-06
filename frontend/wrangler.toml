@@ -1,0 +1,47 @@
+#:schema node_modules/wrangler/config-schema.json
+name = "albert-law-agent-frontend"
+main = "dist/_worker.js/index.js"
+compatibility_date = "2026-02-26"
+compatibility_flags = ["nodejs_compat"]
+workers_dev = true
+preview_urls = false
+
+[assets]
+binding = "ASSETS"
+directory = "dist"
+
+# ─── Observability ────────────────────────────────────────────────────────────
+[observability]
+enabled = true
+
+  [observability.logs]
+  head_sampling_rate = 1
+
+  [observability.traces]
+  enabled = true
+  head_sampling_rate = 0.05
+
+[vars]
+ENVIRONMENT = "development"
+LAW_AGENT_URL = "http://localhost:3000"
+API_URL = "http://localhost:3001"
+
+# =============================================================================
+# Production environment
+# =============================================================================
+# After deploying the backend, update these URLs.
+# Run `cd backend && bunx wrangler deploy` first, then paste the URL below.
+# Example: https://albert-law-agent.<your-subdomain>.workers.dev
+# =============================================================================
+[env.production]
+vars = { ENVIRONMENT = "production", API_URL = "https://albert-law-agent.YOUR_SUBDOMAIN.workers.dev", LAW_AGENT_URL = "https://albert-law-agent-frontend.YOUR_SUBDOMAIN.workers.dev" }
+
+[env.production.observability]
+enabled = true
+
+  [env.production.observability.logs]
+  head_sampling_rate = 0.25
+
+  [env.production.observability.traces]
+  enabled = true
+  head_sampling_rate = 0.02

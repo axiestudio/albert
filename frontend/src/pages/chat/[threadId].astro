@@ -1,0 +1,14 @@
+---
+import { AlbertChatPage as AlbertChatApp } from "@/components/AlbertChatPage";
+import AlbertLayout from "@/layouts/AlbertLayout.astro";
+
+const { threadId } = Astro.params;
+
+if (!threadId) {
+  return Astro.redirect("/");
+}
+---
+
+<AlbertLayout>
+  <AlbertChatApp client:only="react" initialThreadId={threadId} />
+</AlbertLayout>

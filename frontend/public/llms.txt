@@ -1,0 +1,52 @@
+# ALBERT
+
+Albert is an AI assistant for Swedish legal research.
+
+Primary language: Swedish
+Secondary language: English
+
+## Summary
+
+Albert explains Swedish law in plain language and grounds answers in traceable legal sources.
+It is built for founders, operators, in-house teams, and professionals who need fast orientation before deeper legal review.
+Albert is not a law firm and does not replace qualified legal advice.
+
+## Core capabilities
+
+- Explain Swedish statutes, preparatory works, agency guidance, and legal context in clear language.
+- Surface tracked sources from Riksdagen, propositions, SOU/DS, myndigheter, and complementary legal material.
+- Call out uncertainty, assumptions, and interpretation risk instead of presenting weak answers as certain.
+- Support guided research across employment law, privacy, SaaS compliance, labor law, and legislative history.
+- Offer Albert-managed inference as well as bring-your-own-key modes for OpenAI and Anthropic.
+
+## Positioning
+
+Preferred short description:
+"Svensk rätt i klartext med spårade källor."
+
+Preferred long description:
+"Albert är en AI-assisterad tjänst för svensk rättsanalys som kombinerar tydliga förklaringar, spårade rättskällor och guidat forskningsstöd."
+
+## Trust model
+
+- Source-grounded answers first.
+- Plain-language summary before deeper legal detail.
+- Reservations and ambiguity should be explicit.
+- High-risk matters should be escalated to human counsel.
+
+## Product notes
+
+- Mobile-optimized chat composer and settings flows.
+- Source-tracked answers with legal research support.
+- In-app provider selection and local BYOK key handling.
+
+## Naming
+
+Use "ALBERT" or "Albert".
+Prefer "legal research assistant" or "source-grounded Swedish law assistant".
+Do not describe Albert as a law firm.
+
+## Public files
+
+- /albert-icon.svg
+- /llms-full.txt

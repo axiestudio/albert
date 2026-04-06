@@ -1,0 +1,42 @@
+# ═══════════════════════════════════════════════════════════════════════════════
+# Albert Law Agent — Backend Environment Variables
+# ═══════════════════════════════════════════════════════════════════════════════
+# Copy this file to .dev.vars and fill in your real values.
+# Wrangler reads .dev.vars automatically during local development.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+# ─── Core ──────────────────────────────────────────────────────────────────────
+ENVIRONMENT=development
+
+
+# ─── LLM Provider (required — pick one) ──────────────────────────────────────
+
+# Google Gemini via Vertex AI Express Mode (recommended — free tier available)
+# Get a key at: https://aistudio.google.com/apikey
+# Look for keys starting with "AQ." (Express Mode format).
+GOOGLE_API_KEY=your_google_api_key_here
+
+# OpenAI (optional)
+# OPENAI_API_KEY=your_openai_key_here
+
+# Anthropic (optional)
+# ANTHROPIC_API_KEY=your_anthropic_key_here
+
+# ─── Cloudflare Account (required for Vectorize semantic search) ──────────────
+# Get your Account ID from the Cloudflare dashboard → Workers & Pages → Overview
+# Create an API Token at: https://dash.cloudflare.com/profile/api-tokens
+# Needs "Vectorize: Edit" and "Workers AI: Run" permissions.
+CLOUDFLARE_ACCOUNT_ID=your_cloudflare_account_id
+CLOUDFLARE_API_TOKEN=your_cloudflare_api_token
+
+# ─── Cloudflare AI Gateway (optional — analytics, caching, rate limiting) ────
+# CLOUDFLARE_GATEWAY_ACCOUNT_ID=your_account_id
+# CLOUDFLARE_GATEWAY_NAME=your_gateway_name
+# CLOUDFLARE_GATEWAY_TOKEN=your_gateway_token
+
+# ─── Vertex AI Partner Models (optional — for Claude/Mistral/DeepSeek via Vertex) ─
+# VERTEX_PROJECT_ID=your_gcp_project_id
+
+# ─── Browser Use Cloud API (optional — for web research tool) ─────────────────
+# Get a key at: https://cloud.browser-use.com
+# BROWSER_USE_API_KEY=your_browser_use_key

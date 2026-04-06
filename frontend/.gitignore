@@ -1,0 +1,19 @@
+node_modules
+.DS_Store
+dist
+dist-ssr
+*.local
+count.txt
+
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+todos.json
+
+# Downloaded SFS index (regenerated via `bun run sfs:download`)
+data/sfs-index.json
+data/sfs-index-meta.json
+
+

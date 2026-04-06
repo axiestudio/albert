@@ -1,0 +1,31 @@
+{
+  "name": "albert-law-agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Open-source Swedish Law Research Agent — AI-powered legal research using Vertex AI, Cloudflare Workers, and Astro",
+  "license": "MIT",
+  "scripts": {
+    "setup": "bun scripts/albert.mjs setup",
+    "install:all": "bun scripts/albert.mjs install",
+    "dev": "bun scripts/albert.mjs dev",
+    "dev:backend": "cd backend && bun run dev",
+    "dev:frontend": "cd frontend && bun run dev",
+    "build": "bun scripts/albert.mjs build",
+    "build:backend": "cd backend && bun run build",
+    "build:frontend": "cd frontend && bun run build",
+    "check-types": "bun scripts/albert.mjs check-types",
+    "test:e2e": "bun scripts/albert.mjs test",
+    "vectorize:setup": "bun scripts/deploy-vectorize.ts",
+    "vectorize:status": "bun scripts/deploy-vectorize.ts --status",
+    "vectorize:ingest": "bun scripts/download-sfs-index.ts --force && bun scripts/ingest-sfs-vectorize.ts",
+    "deploy": "bun scripts/albert.mjs deploy",
+    "deploy:prod": "bun scripts/albert.mjs deploy:prod",
+    "deploy:backend": "cd backend && bun run deploy",
+    "deploy:frontend": "cd frontend && bun run deploy",
+    "secrets": "bun scripts/albert.mjs secrets"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.2"
+  }
+}

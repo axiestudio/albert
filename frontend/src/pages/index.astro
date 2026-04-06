@@ -1,0 +1,7 @@
+---
+import { createNewThreadId } from "@/lib/albert-history";
+
+const nextThreadId = createNewThreadId();
+
+return Astro.redirect(`/chat/${encodeURIComponent(nextThreadId)}`);
+---
