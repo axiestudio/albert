@@ -375,7 +375,7 @@ After deploying, you can add a custom domain in the Cloudflare dashboard:
 
 ## License
 
-MIT
+Apache-2.0
 
 ---
 
